@@ -8,7 +8,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 //const client = new MongoClient(uri, { useUnifiedTopology: true });
 class DataStore {
   constructor(dbUrl, dbName, dbCollection) {
-    this.fbUrl = dbUrl;
+    this.dbUrl = dbUrl;
     this.dbName = dbName;
     this.dbCollection = dbCollection;
     this.dbClient = null;
@@ -21,7 +21,7 @@ class DataStore {
       this.dbClient = await MongoClient.connect(this.dbUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-      }):
+      });
       console.log("Connected to database!");
       return this.dbClient
     }

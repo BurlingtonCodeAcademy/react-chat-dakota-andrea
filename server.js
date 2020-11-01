@@ -1,6 +1,6 @@
 //import & setup express
 require("dotenv").config();
-const chatFunctions = requie("./chatFunctions");
+const chatFunctions = require("./chatFunctions");
 const express = require("express");
 const path = require("path");
 const port = process.env.PORT || 8000;
@@ -13,11 +13,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //route to endpoint based on function used
-app.get("/users/all", chatFunctions.getAllUsers);
-app.get("/users/:id", chatFunctions.getOneUser);
-app.post("/users", chatFunctions.insertUser);
-app.patch("users/:id", chatFunctions.updateUser);
-app.delete("/users/:id", chatFunctions.deleteUser);
+// app.get("/users/all", chatFunctions.getAllUsers);
+// app.get("/users/:id", chatFunctions.getOneUser);
+// app.post("/users", chatFunctions.insertUser);
+// app.patch("users/:id", chatFunctions.updateUser);
+// app.delete("/users/:id", chatFunctions.deleteUser);
 
 //listen check
 app.listen(port, () => {
