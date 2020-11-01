@@ -8,7 +8,7 @@ function Header (props) {
         
         <div id = 'headerContainer'> 
         <div id = 'headerTitle'>
-            <h1>Dakota's And Andrea's Chat App</h1>
+            <h1 id = 'header-Title'>Dakota's And Andrea's Chat App</h1>
         </div>
         
         </div>

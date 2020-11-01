@@ -10,6 +10,8 @@
     align-items: center;
     text-decoration: black;
     }
+
+    
     
     /*  This styling repeats across all pages/routes */
     #headerContainer {
@@ -24,6 +26,8 @@
     align-items: center;
     flex-direction: column;
     }
+
+
 
     #headerTitle{
     display:flex;    
