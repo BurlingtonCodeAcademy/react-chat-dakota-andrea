@@ -10,11 +10,13 @@ function Main (props) {
         <h1>hello</h1>
 
         <div id = 'chat-display'>    
+         
+         <div id = 'message-input'>
 
+         </div>
 
-     {/*  add message input field and send and refresh buttons . Also add nav bar with all rooms*/
-}
-            
+         <button> Send </button>
+         <button> Refresh </button>
 
         </div>
         

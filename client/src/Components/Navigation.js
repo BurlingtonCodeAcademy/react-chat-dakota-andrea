@@ -10,6 +10,9 @@ function Navigation (props) {
         <nav className = 'navbar'>
 
         <div id = 'navContainer'>
+        <Link to = '/main'> Main </Link>
+        <Link to = '/tutoring'> Tutoring </Link>
+        <Link to = '/cats'> Hobbies  </Link>
         
 
         </div>
