@@ -4,11 +4,11 @@ const url =
 
 let myDataBase = new DataStore(url, "users", "usernames");
 
-//let chatRoomOne = new DataStore(url, "chat-rooms", "room-one");
+let chatRoomOne = new DataStore(url, "chat-rooms", "room-one");
 
-//let chatRoomTwo = new DataStore(url, "chat-rooms", "room-two");
+let chatRoomTwo = new DataStore(url, "chat-rooms", "room-two");
 //Username Schema:
-//{ author: String,
+//{ username: String,
 //  message: String,
 //  time: Date,
 //}
@@ -16,26 +16,41 @@ let myDataBase = new DataStore(url, "users", "usernames");
 const getAllUsers = async (request, response) => {
   let response = await myDataBase.getAll();
   console.log(response);
-  
+  if (response.status === "ok") {
+    response.status(200).send(response.data);
+  } else {
+    response.status(400).send(response.error);
+  }
 };
 
 const insertUser = async (request, response) => {
   let user = request.body.user;
   let newUser = {
-    username: user.username
+    username: user.username;
   };
   let response = await myDataBase.insert(newUser);
   console.log(response);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
-    
+    if (users.status === "ok") {
+      response.status(200).send(users.data);
+    } else {
+      response.status(400).send(users.error);
+    }
+  } else {
+    response.status(400).send(users.error);
+  }
 };
 
 const getOneUser = async (request, response) => {
   let id = request.params.id;
   let response = await myDataBase.getOne(id);
   console.log(response);
-  
+  if (response.status === "ok") {
+    response.status(200).send(response.data);
+  } else {
+    response.status(400).send(response.error);
+  }
 };
 
 const updateUser = async (request, response) => {
@@ -45,7 +60,14 @@ const updateUser = async (request, response) => {
   console.log(response);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
-    
+    if (users.status === "ok") {
+      response.status(200).send(users.data);
+    } else {
+      response.status(400).send(users.error);
+    }
+  } else {
+    response.status(400).send(users.error);
+  }
 };
 
 const deleteUser = async (request, response) => {
@@ -54,7 +76,13 @@ const deleteUser = async (request, response) => {
   console.log(response);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
-    
+    if (users.status === "ok") {
+      response.status(200).send(users.data);
+    } else {
+      response.status(400).send(users.error);
+    }
+  } else {
+    response.status(400).send(users.error);
   }
 };
 
