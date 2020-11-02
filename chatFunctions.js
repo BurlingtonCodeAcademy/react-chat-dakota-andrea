@@ -1,17 +1,18 @@
 const DataStore = require("./datastore.js");
 const url =
   "mongodb+srv://dfaye:passwordAVDF@cluster0.arzvc.mongodb.net/<dbname>?retryWrites=true&w=majority";
-
+//database for users & usernames
 let myDataBase = new DataStore(url, "users", "usernames");
-
+//database for first chat room
 let chatRoomOne = new DataStore(url, "chat-rooms", "room-one");
-
+//database for second chat room
 let chatRoomTwo = new DataStore(url, "chat-rooms", "room-two");
 //Username Schema:
 //{ username: String,
 //  message: String,
 //  time: Date,
 //}
+//need functions for reading & displaying messages
 
 //get all users from database
 const getAllUsers = async (request, response) => {
@@ -86,7 +87,7 @@ const deleteUser = async (request, response) => {
     response.status(400).send(users.error);
   }
 };
-
+//export to be used in the server
 module.exports = {
   getAllUsers: getAllUsers,
   insertUser: insertUser,

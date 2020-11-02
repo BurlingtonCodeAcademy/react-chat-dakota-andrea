@@ -1,6 +1,7 @@
 //setup
 const { MongoClient, ObjectId } = require("mongodb");
 
+//setup a new class
 class DataStore {
   constructor(dbUrl, dbName, dbCollection) {
     this.dbUrl = dbUrl;
@@ -8,6 +9,7 @@ class DataStore {
     this.dbCollection = dbCollection;
     this.dbClient = null;
   }
+  //check for current connection
   async client() {
     if (this.dbClient && this.dbClient.isConnected()) {
       return this.dbClient;
@@ -21,14 +23,14 @@ class DataStore {
       return this.dbClient;
     }
   }
-
+  //show entire collection
   async collection() {
     const client = await this.client();
     const database = client.db(this.dbName);
     const collection = database.collection(this.dbCollection);
     return collection;
   }
-
+  //insert object into database collection
   async insert(object) {
     let response = { status: null, error: null };
     try {
@@ -43,7 +45,7 @@ class DataStore {
     }
     return response;
   }
-
+  //get all objects from a collection
   async getAll() {
     let response = { status: null, error: null, data: null };
     let items = [];
@@ -58,7 +60,7 @@ class DataStore {
     }
     return response;
   }
-
+  //get one item from collection by specific ID
   async getOne(id) {
     let response = { status: null, error: null, data: null };
     try {
@@ -72,7 +74,7 @@ class DataStore {
     }
     return response;
   }
-
+  //update an item in the collection by specific ID
   async update(id, updateObject) {
     let response = { status: null, error: null };
     try {
@@ -86,7 +88,7 @@ class DataStore {
     }
     return response;
   }
-
+  //delete an item from collection by ID
   async delete(id) {
     let response = { status: null, error: null };
     try {
@@ -103,6 +105,8 @@ class DataStore {
 }
 
 module.exports = DataStore;
+//don't need anymore?
+
 // async function run() {
 //   //connect to mongo process
 //   await client.connect();
