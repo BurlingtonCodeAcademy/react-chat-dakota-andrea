@@ -13,23 +13,24 @@ let chatRoomTwo = new DataStore(url, "chat-rooms", "room-two");
 //  time: Date,
 //}
 
+//get all users from database
 const getAllUsers = async (request, response) => {
-  let response = await myDataBase.getAll();
-  console.log(response);
+  let dbResponse = await myDataBase.getAll();
+  console.log(dbResponse);
   if (response.status === "ok") {
     response.status(200).send(response.data);
   } else {
     response.status(400).send(response.error);
   }
 };
-
+//insert a new user into database
 const insertUser = async (request, response) => {
   let user = request.body.user;
   let newUser = {
-    username: user.username;
+    username: user.username,
   };
-  let response = await myDataBase.insert(newUser);
-  console.log(response);
+  let dbResponse = await myDataBase.insert(newUser);
+  console.log(dbResponse);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
     if (users.status === "ok") {
@@ -41,23 +42,23 @@ const insertUser = async (request, response) => {
     response.status(400).send(users.error);
   }
 };
-
+//show one user from database
 const getOneUser = async (request, response) => {
   let id = request.params.id;
-  let response = await myDataBase.getOne(id);
-  console.log(response);
+  let dbResponse = await myDataBase.getOne(id);
+  console.log(dbResponse);
   if (response.status === "ok") {
     response.status(200).send(response.data);
   } else {
     response.status(400).send(response.error);
   }
 };
-
+//update a user
 const updateUser = async (request, response) => {
   let id = request.params.id;
   let updateObject = request.body.updateObject;
-  let response = await myDataBase.update(id, updateObject);
-  console.log(response);
+  let dbResponse = await myDataBase.update(id, updateObject);
+  console.log(dbResponse);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
     if (users.status === "ok") {
@@ -69,11 +70,11 @@ const updateUser = async (request, response) => {
     response.status(400).send(users.error);
   }
 };
-
+//delete a user
 const deleteUser = async (request, response) => {
   let id = request.params.id;
-  let response = await myDataBase.delete(id);
-  console.log(response);
+  let dbResponse = await myDataBase.delete(id);
+  console.log(dbResponse);
   if (response.status === "ok") {
     let users = await myDataBase.getAll();
     if (users.status === "ok") {
@@ -87,9 +88,9 @@ const deleteUser = async (request, response) => {
 };
 
 module.exports = {
-    getAllUsers: getAllUsers,
-    insertUser: insertUser,
-    getOneUser: getOneUser,
-    updateUser: updateUser,
-    deleteUser: deleteUser,
+  getAllUsers: getAllUsers,
+  insertUser: insertUser,
+  getOneUser: getOneUser,
+  updateUser: updateUser,
+  deleteUser: deleteUser,
 };

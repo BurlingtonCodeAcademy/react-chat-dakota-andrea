@@ -1,11 +1,6 @@
 //setup
 const { MongoClient, ObjectId } = require("mongodb");
 
-
-//path to mongo DB
-//const uri = "mongodb://localhost:27017";
-//mongo connection constructor
-//const client = new MongoClient(uri, { useUnifiedTopology: true });
 class DataStore {
   constructor(dbUrl, dbName, dbCollection) {
     this.dbUrl = dbUrl;
@@ -23,7 +18,7 @@ class DataStore {
         useUnifiedTopology: true,
       });
       console.log("Connected to database!");
-      return this.dbClient
+      return this.dbClient;
     }
   }
 
@@ -35,7 +30,7 @@ class DataStore {
   }
 
   async insert(object) {
-    let response= { status: null, error: null };
+    let response = { status: null, error: null };
     try {
       let collection = await this.collection();
       console.log("Inserting item...");
@@ -50,23 +45,22 @@ class DataStore {
   }
 
   async getAll() {
-    let response = { status: null, error: null,data: null };
+    let response = { status: null, error: null, data: null };
     let items = [];
     try {
       let collection = await this.collection();
       await collection.find({}).forEach((item) => items.push(item));
       response.status = "ok";
-      response.data = items
-
-    } catch(error) {
+      response.data = items;
+    } catch (error) {
       response.error = error.toString();
-      console.log(error.toString())
-    } 
-    return response
+      console.log(error.toString());
+    }
+    return response;
   }
 
   async getOne(id) {
-    let response = { status: null, error: null,data: null };
+    let response = { status: null, error: null, data: null };
     try {
       let collection = await this.collection();
       let item = await collection.findOne({ _id: ObjectId(id) });
@@ -108,7 +102,7 @@ class DataStore {
   }
 }
 
-module.exports = DataStore
+module.exports = DataStore;
 // async function run() {
 //   //connect to mongo process
 //   await client.connect();

@@ -1,44 +1,44 @@
 /*  This styling repeats across all pages/routes  */
 #navigationContainer {
-    display:flex;    
-    height:10vh;
-    width:100vw;
-    border: 1px solid black;
-    justify-content: space-around;
-    background-color: rgb(128, 124, 133);
-    content: color black;
-    align-items: center;
-    text-decoration: black;
-    }
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  border: 1px solid black;
+  justify-content: space-around;
+  background-color: rgb(128, 124, 133);
+  content: color black;
+  align-items: center;
+  text-decoration: black;
+}
 
-    
-    
-    /*  This styling repeats across all pages/routes */
-    #headerContainer {
-    display:flex;    
-    height:35vh;
-    width:100vw;
-    border: 1px solid black;
-    justify-content:space-around;
-    background-color: rgb(128, 124, 133);
-    content: color black;
-    text-decoration: black;
-    align-items: center;
-    flex-direction: column;
-    }
+/*  This styling repeats across all pages/routes */
+#headerContainer {
+  display: flex;
+  height: 35vh;
+  width: 100vw;
+  border: 1px solid black;
+  justify-content: space-around;
+  background-color: rgb(128, 124, 133);
+  content: color black;
+  text-decoration: black;
+  align-items: center;
+  flex-direction: column;
+}
 
+#headerTitle {
+  display: flex;
+  height: 35vh;
+  width: 100vw;
+  border: 1px solid black;
+  justify-content: space-around;
+  background-color: rgb(128, 124, 133);
+  content: color black;
+  text-decoration: black;
+  align-items: center;
+}
 
-
-    #headerTitle{
-    display:flex;    
-    height:35vh;
-    width:100vw;
-    border: 1px solid black;
-    justify-content:space-around;
-    background-color: rgb(128, 124, 133);
-    content: color black;
-    text-decoration: black;
-    align-items: center;
-    }
-
-    
+.user-input {
+  display: flex;
+  width: 500px;
+  border: 5px solid black;
+}
