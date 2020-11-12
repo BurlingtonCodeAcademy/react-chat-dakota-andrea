@@ -3,11 +3,11 @@ import React from 'react';
 //importing the style sheet-------------------------------------------
 import './App.css';
 //importing route components -----------------------------------------
-import Main from './Components/Main'
-import Tutoring from './Components/Tutoring'
-import Cats from './Components/Cats'
-import Navigation from './Components/Navigation';
-import Header from './Components/Header';
+import Main from './Main'
+import Tutoring from './Tutoring'
+import Cats from './Cats'
+import Navigation from './Navigation';
+import Header from './Header';
 //browser router, React router DOM, to switch view using routes---------
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //import React, {useState, useEffect} from "react"
