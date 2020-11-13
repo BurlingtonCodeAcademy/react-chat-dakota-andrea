@@ -3,24 +3,18 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Navigation (props) {
+function Navigation (props){
     const [click, setClick] = useState (false);
-
-    return (
-        <nav className = 'navbar'>
-
-        <div id = 'navContainer'>
-        <Link to = '/main'> Main </Link>
-        <Link to = '/tutoring'> Tutoring </Link>
-        <Link to = '/cats'> Hobbies  </Link>
-        
-
-        </div>
-
-        
+    return(
+        <nav className = "navBar">
+          <div id = "navBarContainer">
+            <Link to = "./Components/Main.js">MAIN</Link>
+            <Link to = "./Components/Cats.js">HEADER</Link>
+            <Link to = "./Components/Cats.js">CATS</Link>
+            <Link to = "./Components/Cats.js">TUTORING</Link>
+          </div>
         </nav>
     )
-
 }
 
 export default Navigation; 

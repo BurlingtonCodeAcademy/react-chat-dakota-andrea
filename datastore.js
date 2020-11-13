@@ -1,11 +1,7 @@
 //setup
 const { MongoClient, ObjectId } = require("mongodb");
 
-
-//path to mongo DB
-//const uri = "mongodb://localhost:27017";
-//mongo connection constructor
-//const client = new MongoClient(uri, { useUnifiedTopology: true });
+//setup a new class
 class DataStore {
   constructor(dbUrl, dbName, dbCollection) {
     this.dbUrl = dbUrl;
@@ -13,6 +9,7 @@ class DataStore {
     this.dbCollection = dbCollection;
     this.dbClient = null;
   }
+  //check for current connection
   async client() {
     if (this.dbClient && this.dbClient.isConnected()) {
       return this.dbClient;
@@ -23,19 +20,19 @@ class DataStore {
         useUnifiedTopology: true,
       });
       console.log("Connected to database!");
-      return this.dbClient
+      return this.dbClient;
     }
   }
-
+  //show entire collection
   async collection() {
     const client = await this.client();
     const database = client.db(this.dbName);
     const collection = database.collection(this.dbCollection);
     return collection;
   }
-
+  //insert object into database collection
   async insert(object) {
-    let response= { status: null, error: null };
+    let response = { status: null, error: null };
     try {
       let collection = await this.collection();
       console.log("Inserting item...");
@@ -48,25 +45,24 @@ class DataStore {
     }
     return response;
   }
-
+  //get all objects from a collection
   async getAll() {
-    let response = { status: null, error: null,data: null };
+    let response = { status: null, error: null, data: null };
     let items = [];
     try {
       let collection = await this.collection();
       await collection.find({}).forEach((item) => items.push(item));
       response.status = "ok";
-      response.data = items
-
-    } catch(error) {
+      response.data = items;
+    } catch (error) {
       response.error = error.toString();
-      console.log(error.toString())
-    } 
-    return response
+      console.log(error.toString());
+    }
+    return response;
   }
-
+  //get one item from collection by specific ID
   async getOne(id) {
-    let response = { status: null, error: null,data: null };
+    let response = { status: null, error: null, data: null };
     try {
       let collection = await this.collection();
       let item = await collection.findOne({ _id: ObjectId(id) });
@@ -78,7 +74,7 @@ class DataStore {
     }
     return response;
   }
-
+  //update an item in the collection by specific ID
   async update(id, updateObject) {
     let response = { status: null, error: null };
     try {
@@ -92,7 +88,7 @@ class DataStore {
     }
     return response;
   }
-
+  //delete an item from collection by ID
   async delete(id) {
     let response = { status: null, error: null };
     try {
@@ -108,7 +104,9 @@ class DataStore {
   }
 }
 
-module.exports = DataStore
+module.exports = DataStore;
+//don't need anymore?
+
 // async function run() {
 //   //connect to mongo process
 //   await client.connect();

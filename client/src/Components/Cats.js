@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Cats (props) {
+function Cats (props){
+    return(
+        <div id = "catsChatWrapper">
+            <div id = "catsChatWindow">
+                <div id = "catsChatInput">
 
-    return (
-        <div id = 'catsContainer'>
-
-        
+                </div>
             </div>
-
-    
+        </div>
     )
 
 }
