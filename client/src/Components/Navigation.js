@@ -8,10 +8,10 @@ function Navigation (props){
     return(
         <nav className = "navBar">
           <div id = "navBarContainer">
-            <Link to = "./Components/Main.js">MAIN</Link>
-            <Link to = "./Components/Cats.js">HEADER</Link>
-            <Link to = "./Components/Cats.js">CATS</Link>
-            <Link to = "./Components/Cats.js">TUTORING</Link>
+            <Link to = "./Main.js">MAIN</Link>
+            <Link to = "./BabuFrik.js">HEADER</Link>
+            <Link to = "./BabyYoda.js">CATS</Link>
+            <Link to = "./Header.js">TUTORING</Link>
           </div>
         </nav>
     )

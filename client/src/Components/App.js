@@ -4,8 +4,8 @@ import React from "react";
 import "../App.css";
 //importing route components -----------------------------------------
 import Main from "./Main";
-import Tutoring from "./Tutoring";
-import Cats from "./Cats";
+import BabuFrik from "./BabuFrik";
+import BabyYoda from "./BabyYoda";
 import Navigation from "./Navigation";
 import Header from "./Header";
 //browser router, React router DOM, to switch view using routes---------
@@ -22,8 +22,8 @@ function App() {
         <Switch>
           <Route path="/main" render={() => <Main />} />
           <Route exact path="/" render={() => <Main />} />
-          <Route path="/tutoring" render={() => <Tutoring />} />
-          <Route path="/cats" render={() => <Cats />} />
+          <Route path="/babufrik" render={() => <BabuFrik />} />
+          <Route path="/babyyoda" render={() => <BabyYoda/>} />
         </Switch>
       </Router>
       <Navigation/>

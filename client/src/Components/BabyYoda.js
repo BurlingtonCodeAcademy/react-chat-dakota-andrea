@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Tutoring (props){
+function BabyYoda(props){
     return(
-        <div id = "tutoringChatWrapper">
-            <div id = "tutoringChatWindow">
-                <div id = "tutoringChatInput">
+        <div id = "yodaChatWrapper">
+            <div id = "yodaChatWindow">
+                <div id = "yodaChatInput">
 
                 </div>
             </div>
@@ -16,4 +16,4 @@ function Tutoring (props){
 
 }
 
-export default Tutoring; 
+export default BabyYoda; 

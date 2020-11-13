@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Cats (props){
+function BabuFrik (props){
     return(
-        <div id = "catsChatWrapper">
-            <div id = "catsChatWindow">
-                <div id = "catsChatInput">
+        <div id = "babuChatWrapper">
+            <div id = "babuChatWindow">
+                <div id = "babuChatInput">
 
                 </div>
             </div>
@@ -16,4 +16,4 @@ function Cats (props){
 
 }
 
-export default Cats; 
+export default BabuFrik; 
