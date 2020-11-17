@@ -3,66 +3,65 @@ body{
   padding:0;
 }
 
-/* HOMEPAGE / MAIN ROOM */
-
-#mainChatWrapper{
-  display:flex;
-  height:80vh;
-  width:60vw;
-}
-
-#mainChatWindow{
-  display:flex;
-  height:80vh;
-  width:60vw;
-  background-color: fuchsia;
-}
-
-#mainChatInput{
-  display:flex;
-  height:15vh;
-  width:60vw;
-  background-color:white;
-}
-
-
 
 
 /*  ----------This styling repeats across all pages/routes --------------- */
-#navBarContainer{
+.navBar{
   display: flex;
   height: 10vh;
   width: 100vw;
   border: 1px solid black;
   justify-content: space-around;
   background-color:black;
-  align-items: center;
   color:white;
+  justify-content: space-around;
 }
 
-/*  This styling repeats across all pages/routes */
-#headerContainer {
-  display: flex;
-  height: 35vh;
-  width: 100vw;
-  border: 1px solid black;
-  justify-content: space-around;
-  background-color: rgb(128, 124, 133);
-  content: color black;
-  text-decoration: black;
-  align-items: center;
-  flex-direction: column;
+.navBar link{
+text-decoration:none;  
 }
-/* 
-#headerTitle {
-  display: flex;
-  height: 35vh;
-  width: 100vw;
-  border: 1px solid black;
-  justify-content: space-around;
-  background-color: rgb(128, 124, 133);
-  content: color black;
-  text-decoration: black;
-  align-items: center;
-} */
+
+
+
+.headerContainer{
+ display:flex;
+ justify-content: center; 
+ background-color: black;
+ color:white;
+}
+
+
+/* MAIN CHAT ROOM STYLING */
+
+
+.mainChatWrapper{
+display:flex;
+flex-direction:column;
+height:70vh;
+width:100vw;
+background: red;
+align-items: center;
+}
+
+
+.mainChatWindow{
+  display:flex;
+  height:70vh;
+  width:60vw;
+  background-color:black;
+  color:red;
+  flex-direction:column;
+}
+
+.mainChatInput{
+  display:flex;
+  height:15vh;
+  width:60vw;
+  background-color:chartreuse;
+  color:red;
+  margin-bottom: 0%;
+}
+
+
+
 

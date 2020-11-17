@@ -1,19 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 
-function Navigation (props){
-    const [click, setClick] = useState (false);
+
+
+function Navigation (){
+    // const [click, setClick] = useState (false);
     return(
-        <nav className = "navBar">
-          <div id = "navBarContainer">
-            <Link to = "./Main.js">MAIN</Link>
-            <Link to = "./BabuFrik.js">HEADER</Link>
-            <Link to = "./BabyYoda.js">CATS</Link>
-            <Link to = "./Header.js">TUTORING</Link>
-          </div>
+      <div>
+        <nav>
+          <div className= "navBar">
+            <Link to = "/Main.js">Main Chat Room</Link>
+            <Link to = "/BabuFrik.js">Babu Frik</Link>
+            <Link to = "/BabyYoda.js">Baby Yoda</Link>
+          </div> 
         </nav>
+        </div>
     )
 }
 

@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Main (props){
+function Main (){
     return(
-        <div id = "mainChatWrapper">
-            <div id = "mainChatWindow">
-                <h1>chat</h1>
-                <div id = "mainChatInput">
-                   <h1>Hello from main</h1>
+        <div className= "mainChatWrapper">
+            <div className= "mainChatWindow">
+            <h1>Hello from main chat Window</h1>
+                <div className= "mainChatInput">
+                <h1>Hello from main chat Input</h1>
+                   
                 </div>
             </div>
         </div>

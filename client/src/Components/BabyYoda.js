@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function BabyYoda(props){
+function BabyYoda(){
     return(
-        <div id = "yodaChatWrapper">
-            <div id = "yodaChatWindow">
-                <div id = "yodaChatInput">
-
+        <div className= "yodaChatWrapper">
+             <h1>Hello from Bebby</h1>
+            <div className= "yodaChatWindow">
+                <div className= "yodaChatInput">
+                <h1>Hello from Babu Input</h1>
                 </div>
             </div>
         </div>

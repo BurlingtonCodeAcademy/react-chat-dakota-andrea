@@ -12,22 +12,26 @@ import Header from "./Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import React, {useState, useEffect} from "react"
 
+
 function App() {
   //this function allows this app to use React router DOM and have access to
   //each route component.
   return (
+    <Router>
     <div className="App">
-      <Router>
         <Header/>
+        <Main/>
+        <Navigation/>
         <Switch>
-          <Route path="/main" render={() => <Main />} />
-          <Route exact path="/" render={() => <Main />} />
-          <Route path="/babufrik" render={() => <BabuFrik />} />
-          <Route path="/babyyoda" render={() => <BabyYoda/>} />
+        <Route exact path="/">
+        <Main/>
+        </Route>
+          <Route path="/main" component={Main}/>
+          <Route path="/babufrik" component={BabuFrik} />
+          <Route path="/babyyoda" component={BabyYoda} />
         </Switch>
-      </Router>
-      <Navigation/>
     </div>
+    </Router>
   );
 }
 
