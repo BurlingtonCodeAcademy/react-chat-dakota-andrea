@@ -24,11 +24,10 @@ function App() {
         <Navigation/>
         <Switch>
         <Route exact path="/">
-        <Main/>
         </Route>
-          <Route path="/main" component={Main}/>
-          <Route path="/babufrik" component={BabuFrik} />
-          <Route path="/babyyoda" component={BabyYoda} />
+          <Route path="/Main" component={Main}/>
+          <Route path="/BabuFrik" component={BabuFrik} />
+          <Route path="/BabyYoda" component={BabyYoda} />
         </Switch>
     </div>
     </Router>
