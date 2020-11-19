@@ -1,6 +1,6 @@
 const DataStore = require("./datastore.js");
 const url =
-  "mongodb+srv://dfaye:passwordAVDF@cluster0.arzvc.mongodb.net/<dbname>?retryWrites=true&w=majority";
+  "mongodb+srv://dfaye:password1234@cluster0.arzvc.mongodb.net/<dbname>?retryWrites=true&w=majority";
 //database for users & usernames
 let myDataBase = new DataStore(url, "users", "usernames");
 //database for first chat room
@@ -27,8 +27,9 @@ const getAllUsers = async (request, response) => {
 //insert a new user into database
 const insertUser = async (request, response) => {
   let user = request.body.user;
+  console.log(user);
   let newUser = {
-    username: user.username,
+    username: user,
   };
   let dbResponse = await myDataBase.insert(newUser);
   console.log(dbResponse);

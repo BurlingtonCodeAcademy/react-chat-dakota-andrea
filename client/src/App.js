@@ -16,8 +16,8 @@ function App() {
   //this function allows this app to use React router DOM and have access to
   //each route component.
   return (
-    <div className="App">
-      <Router>
+    
+      {/* <Router>
         <Header />
         <Switch>
           <Route path="/main" render={() => <Main />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/cats" render={() => <Cats />} />
         </Switch>
       </Router>
-      <Navigation />
+      <Navigation /> */}
     </div>
   );
 }
