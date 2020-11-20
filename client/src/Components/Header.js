@@ -2,16 +2,15 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 
-function Header (props) {
+function Header () {
 
     return (
         
-        <div id = 'headerContainer'> 
-        <div id = 'headerTitle'>
-            <h1 id = 'header-Title'>Dakota's And Andrea's Chat App</h1>
+        <div className= 'headerContainer'>
+            <h1 className = 'header-Title'>Dakota And Andrea's Star Wars Chat App</h1>
         </div>
         
-        </div>
+       
         
     )
 

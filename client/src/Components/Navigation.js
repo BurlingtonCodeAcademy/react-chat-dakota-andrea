@@ -1,26 +1,20 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
 
-
-function Navigation (props) {
-    const [click, setClick] = useState (false);
-
-    return (
-        <nav className = 'navbar'>
-
-        <div id = 'navContainer'>
-        <Link to = '/main'> Main </Link>
-        <Link to = '/tutoring'> Tutoring </Link>
-        <Link to = '/cats'> Hobbies  </Link>
-        
-
+function Navigation() {
+  // const [click, setClick] = useState (false);
+  return (
+    <div>
+      <nav>
+        <div className="navBar">
+          <Link to="/Main">Main Chat Room</Link>
+          <Link to="/BabuFrik">Babu Frik</Link>
+          <Link to="/BabyYoda">Baby Yoda</Link>
         </div>
-
-        
-        </nav>
-    )
-
+      </nav>
+    </div>
+  );
 }
 
-export default Navigation; 
+export default Navigation;
