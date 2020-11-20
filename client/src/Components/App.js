@@ -25,9 +25,9 @@ function App() {
         <Switch>
         <Route exact path="/">
         </Route>
-          <Route path="/Main" component={Main}/>
-          <Route path="/BabuFrik" component={BabuFrik} />
-          <Route path="/BabyYoda" component={BabyYoda} />
+          <Route path="./Main" component={Main}/>
+          <Route path="./BabuFrik" component={BabuFrik} />
+          <Route path="./BabyYoda" component={BabyYoda} />
         </Switch>
     </div>
     </Router>

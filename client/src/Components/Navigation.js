@@ -11,9 +11,9 @@ function Navigation (){
       <div>
         <nav>
           <div className= "navBar">
-            <Link to = "/Main.js">Main Chat Room</Link>
-            <Link to = "/BabuFrik.js">Babu Frik</Link>
-            <Link to = "/BabyYoda.js">Baby Yoda</Link>
+            <Link to = "./Main">Main Chat Room</Link>
+            <Link to = "./BabuFrik">Babu Frik</Link>
+            <Link to = "./BabyYoda">Baby Yoda</Link>
           </div> 
         </nav>
         </div>

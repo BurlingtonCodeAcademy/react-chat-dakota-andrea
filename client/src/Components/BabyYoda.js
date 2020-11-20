@@ -8,10 +8,10 @@ function BabyYoda(){
         <div className= "yodaChatWrapper">
              <h1>Hello from Bebby</h1>
             <div className= "yodaChatWindow">
-                <div className= "yodaChatInput">
-                <h1>Hello from Babu Input</h1>
-                </div>
             </div>
+            <div className= "yodaChatInput">
+                <h1>Hello from BebbyYoda Input</h1>
+                </div>
         </div>
     )
 

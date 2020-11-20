@@ -8,9 +8,9 @@ function BabuFrik (){
         <div className = "babuChatWrapper">
             <h1>Hello from Babu</h1>
             <div className= "babuChatWindow">
+                </div>
                 <div className = "babuChatInput">
                 <h1>Hello from Babu Input</h1>
-                </div>
             </div>
         </div>
     )
