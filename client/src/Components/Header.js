@@ -1,7 +1,9 @@
+//-------- Imports 
 import { Link } from 'react-router-dom';
 import '../App.css';
 
 
+//----- function for the header component
 function Header () {
 
     return (
@@ -16,4 +18,5 @@ function Header () {
 
 }
 
+//----exporting component 
 export default Header; 

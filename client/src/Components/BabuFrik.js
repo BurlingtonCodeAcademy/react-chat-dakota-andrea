@@ -1,8 +1,9 @@
+//---- Imports
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-
+// --- Babu Frik chat room function 
 function BabuFrik (){
     return(
         <div className = "babuChatWrapper">
@@ -17,4 +18,5 @@ function BabuFrik (){
 
 }
 
+// ----- component export
 export default BabuFrik; 

@@ -1,8 +1,9 @@
+// ----- Imports
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-
+//  ---- Baby Yoda chat room function
 function BabyYoda(){
     return(
         <div className= "yodaChatWrapper">
@@ -17,4 +18,5 @@ function BabyYoda(){
 
 }
 
+//-----exporting component
 export default BabyYoda; 
