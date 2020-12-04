@@ -11,7 +11,6 @@ function Main() {
         <h1>Hello from main chat Window</h1>
       </div>
       <div className="mainChatInput">
-        <h1>Hello from main chat Input</h1>
         <form action="submit">
           <input type="text" id="username"></input>
           <input type="text" id="message"></input>
