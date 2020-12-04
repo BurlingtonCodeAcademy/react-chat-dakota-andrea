@@ -64,7 +64,7 @@ body {
 
 /* ------------------I BABU------------ */
 
-#babuChatWrapper{
+.babuChatWrapper{
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -73,7 +73,7 @@ body {
   align-items: center; 
 }
 
-#babuChatWindow{
+.babuChatWindow{
   display: flex;
   height: 70vh;
   width: 60vw;
@@ -83,7 +83,7 @@ body {
   align-items: center;
 }
 
-#babuChatInput{
+.babuChatInput{
   display: flex;
   height: 15vh;
   width: 60vw;
@@ -96,7 +96,7 @@ body {
 
 /* AM BEBBY  */
 
-#yodaChatWrapper{
+.yodaChatWrapper{
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -105,7 +105,7 @@ body {
   align-items: center;
 }
 
-#yodaChatWindow{
+.yodaChatWindow{
   display: flex;
   height: 70vh;
   width: 60vw;
@@ -115,7 +115,7 @@ body {
   align-items: center;
 }
 
-#yodaChatInput{
+.yodaChatInput{
   display: flex;
   height: 15vh;
   width: 60vw;
@@ -124,6 +124,7 @@ body {
   margin-bottom: 0%;
   justify-content: center;
 }
+
 
 
 

@@ -11,7 +11,7 @@ function BabyYoda() {
       <h1>Hello from Bebby</h1>
       </div>
         <div className="yodaChatInput">
-          <h1>Hello from Babu Input</h1>
+          <h1>Hello from yoda</h1>
           <form action="submit">
             <input type="text" id="username"></input>
             <input type="text" id="message"></input>
