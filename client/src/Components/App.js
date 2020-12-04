@@ -31,4 +31,5 @@ function App() {
   );
 }
 
+/// exporting component 
 export default App;

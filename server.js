@@ -12,7 +12,6 @@ const staticDir = process.env.DEV ? "./client/public" : "./client/build";
 //middleware
 
 app.use(express.static(path.resolve(staticDir)));
-console.log(staticDir)
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 

@@ -1,7 +1,9 @@
+// ---- Imports -------
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
+// ----- Main chat room function
 function Main() {
   return (
     <div className="mainChatWrapper">
@@ -19,5 +21,7 @@ function Main() {
     </div>
   );
 }
+
+// ---- exporting component
 
 export default Main;

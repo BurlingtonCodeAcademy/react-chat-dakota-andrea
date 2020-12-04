@@ -16,6 +16,7 @@ body {
   justify-content: space-around;
 }
 
+/*  Nav Bar Link */
 .navBar link {
   text-decoration: none;
 }
@@ -38,6 +39,7 @@ body {
   align-items: center;
 }
 
+/*  window showing all messages sent  */
 .mainChatWindow {
   display: flex;
   height: 70vh;
@@ -48,6 +50,7 @@ body {
   align-items: center;
 }
 
+/*  styling for the input form in the chat */
 .mainChatInput {
   display: flex;
   height: 15vh;
