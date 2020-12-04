@@ -7,16 +7,17 @@ import "../App.css";
 function BabuFrik() {
   return (
     <div className="babuChatWrapper">
-      <h1>Hello from Babu</h1>
-      <div className="babuChatWindow"></div>
+      <div className="babuChatWindow">
+        <h1>Hello from Babu</h1>
+      </div>
       <div className="babuChatInput">
         <h1>Hello from Babu Input</h1>
+        <form action="submit">
+          <input type="text" id="username"></input>
+          <input type="text" id="message"></input>
+          <input type="submit" placeholder="submit"></input>
+        </form>
       </div>
-      <form action="submit">
-        <input type="text" id="username"></input>
-        <input type="text" id="message"></input>
-        <input type="submit" placeholder="submit"></input>
-      </form>
     </div>
   );
 }
