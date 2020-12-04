@@ -1,70 +1,59 @@
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
-
-
 /*  ----------This styling repeats across all pages/routes --------------- */
-.navBar{
+.navBar {
   display: flex;
   height: 10vh;
   width: 100vw;
   border: 1px solid black;
   justify-content: space-around;
-  background-color:black;
-  color:white;
+  background-color: black;
+  color: white;
   justify-content: space-around;
 }
 
-
-.navBar link{
-text-decoration:none;  
+.navBar link {
+  text-decoration: none;
 }
 
-
-
-.headerContainer{
- display:flex;
- justify-content: center; 
- background-color: black;
- color:white;
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
 }
-
 
 /* MAIN CHAT ROOM STYLING */
 
-
-.mainChatWrapper{
-display:flex;
-flex-direction:column;
-height:70vh;
-width:100vw;
-background: red;
-align-items: center;
+.mainChatWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 100vw;
+  background: red;
+  align-items: center;
 }
 
-
-.mainChatWindow{
-  display:flex;
-  height:70vh;
-  width:60vw;
-  background-color:black;
-  color:red;
-  flex-direction:column;
-  align-items:center;
+.mainChatWindow {
+  display: flex;
+  height: 70vh;
+  width: 60vw;
+  background-color: black;
+  color: red;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mainChatInput{
-  display:flex;
-  height:15vh;
-  width:60vw;
-  background-color:chartreuse;
-  color:red;
+.mainChatInput {
+  display: flex;
+  height: 15vh;
+  width: 60vw;
+  background-color: chartreuse;
+  color: red;
   margin-bottom: 0%;
-  justify-content:center;
+  justify-content: center;
 }
-
-
-
-
